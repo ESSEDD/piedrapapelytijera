@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Piedra, Papel o Tijera con Vidas</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -12,11 +13,11 @@
   <h1 class="text-center">Piedra, Papel o Tijera</h1>
   <p class="text-center">Vidas: <span id="lives">3</span></p>
   <div class="text-center">
-    <button class="btn btn-primary" onclick="playGame('piedra')">Piedra</button>
-    <button class="btn btn-primary" onclick="playGame('papel')">Papel</button>
-    <button class="btn btn-primary" onclick="playGame('tijera')">Tijera</button>
+    <button class="btn btn-danger" onclick="playGame('piedra')">Piedra</button>
+    <button class="btn btn-danger" onclick="playGame('papel')">Papel</button>
+    <button class="btn btn-danger" onclick="playGame('tijera')">Tijera</button>
   </div>
-  <div id="result" class="mt-4 text-center"></div>
+  <div id="result" class="mt-4 text-center animated" style="animation-duration: 1s;"></div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

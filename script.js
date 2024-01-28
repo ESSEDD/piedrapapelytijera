@@ -25,7 +25,11 @@ function playGame(playerChoice) {
     }
   }
 
-  document.getElementById('result').innerHTML = `<p>Elegiste ${playerChoice}. La computadora eligió ${computerChoice}. ${result}</p>`;
+  const resultElement = document.getElementById('result');
+  resultElement.innerHTML = `<p>Elegiste ${playerChoice}. La computadora eligió ${computerChoice}. ${result}</p>`;
+  resultElement.classList.add('animated');
+
+  // Actualizar el contador de vidas
   document.getElementById('lives').innerText = lives;
 
   // Si quedan vidas, permitir continuar el juego
@@ -35,5 +39,8 @@ function playGame(playerChoice) {
 }
 
 function resetGame() {
-  // Puedes agregar lógica adicional para reiniciar el juego si es necesario
+  setTimeout(() => {
+    document.getElementById('result').classList.remove('animated');
+    document.getElementById('result').innerHTML = '';
+  }, 1000); // Esperar 1 segundo antes de permitir la siguiente animación
 }
